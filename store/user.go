@@ -24,7 +24,7 @@ func createUser(vkid int) {
 func GetUser(vkid int) *User {
 	u := &User{}
 	row := DB.QueryRow("select uid, vkid, node, UserName, SelectDate, SelectCollection, SelectType, SelectStoreys, SelectProject, Data from users where vkid=$1", vkid)
-	err := row.Scan(&u.UID, &u.VKID, &u.Node, &u.UserName, &u.SelectDate, &u.SelectCollection, &u.SelectStoreys, &u.SelectProject, &u.Data)
+	err := row.Scan(&u.UID, &u.VKID, &u.Node, &u.UserName, &u.SelectDate, &u.SelectCollection, &u.SelectType, &u.SelectStoreys, &u.SelectProject, &u.Data)
 	if err == sql.ErrNoRows {
 		createUser(vkid)
 		return GetUser(vkid)
