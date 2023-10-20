@@ -11,7 +11,7 @@ import (
 )
 
 var mainTokens = []string{
-	"vk1.a._iN09sGUnHs5Iez4FmMQN_l4mSk9rIWLqyS_uPYbgZ2G9gpl9dumNOCFnGHZ3KH9YPMpqx7SMXe84Zrr24wSZTkw4Cm-XiXoTDBBVobgP-rW_GVeAvmrV_D7mCdvVtWnrUzoBsYbx-WNTsZZuIxu3ZjNQbto9u48RXBC7BE0WU02zKndZ-O0yRdpQJxPTVMAlCNeukpYY2ZyyiGVmwA8pQ",
+	"vk1.a.2_QHnK35GSoVNOJ-ga0blSUbCkeZKz7i2VNiZsaeh48V27SO6CHAV4Ox6BobA7VIg-PA-k4wlYCB5CAh_bURsmrgvpNaTqmEQCSRRxqzNxtogzdNN-Y1HhIdtbah6EKWZ_ShjFlHS2uiibeDmu5ayHo5m2lceNX2wDYgoM9bWLTB-P_SDsj1RMmZmiq8huPKyrjPVoWCyrMcr1w4GhI0jw",
 }
 
 var mainClient = vkapi.NewPool(mainTokens)
