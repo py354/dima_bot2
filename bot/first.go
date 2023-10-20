@@ -237,6 +237,7 @@ func init() {
 			msg.User.SetSelectStoreys(itemID)
 			if itemID == 3 {
 				msg.Trans(Node7)
+				return true
 			}
 
 			msg.Trans(Node6)
