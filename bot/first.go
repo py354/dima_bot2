@@ -282,7 +282,7 @@ func init() {
 			
 			Доставка: грузовой транспорт с КМУ.
 			От 50 рублей за км.`
-			msg.Client.SendMessage(msg.PeerID, text, "", "")
+			msg.Client.SendMessage(msg.PeerID, text, `{"buttons":[]}`, "")
 		},
 		Default: func(msg *primitives.Message) bool {
 			msg.User.SetData(msg.Text)
