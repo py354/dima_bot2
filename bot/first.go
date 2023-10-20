@@ -5,6 +5,7 @@ import (
 	"dima_bot/store"
 	"dima_bot/vkapi"
 	"fmt"
+	"log"
 	"strconv"
 )
 
@@ -75,7 +76,8 @@ func init() {
 				ButtonsGrid: [][]vkapi.Button{{vkapi.MakeButton("Жми", "", vkapi.KbBlue)}},
 			}
 			text := fmt.Sprintf("Привет, %s!\nГотовы сделать первый шаг к жизни в новом доме?\n\nЗаполните заявку и получите готовый ориентировочный расчёт.", msg.User.UserName)
-			msg.Client.SendMessage(msg.PeerID, text, kb.String(), "")
+			r := msg.Client.SendMessage(msg.PeerID, text, kb.String(), "")
+			log.Println("send 1st msg", string(r))
 		},
 		Default: func(msg *primitives.Message) bool {
 			msg.Trans(Node2)
